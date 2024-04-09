@@ -1,0 +1,12 @@
+<button (click)="logout()" style="float:right">Logout</button>
+<p>Fruits</p>
+
+<div>
+
+    <fruit [fruit]="appleFruit" (push)="onPush($event)" (pop)="onPop($event)"></fruit>
+    <fruit [fruit]="orangeFruit" (push)="onPush($event)" (pop)="onPop($event)"></fruit>
+    <fruit [fruit]="grapeFruit" (push)="onPush($event)" (pop)="onPop($event)"></fruit>
+    <br/><br/>
+    <basket [fruits]="fruits"></basket>
+
+</div>

@@ -1,0 +1,11 @@
+
+<div>
+<div *ngIf="error">{{message}}</div>
+
+<div [style.background]="fruit.color" class="box">
+<p>{{fruit.name}}</p>
+<p>{{fruit.count}}</p>
+<p><button (click) = "remove()" class="circle">+</button><button (click) = "add()" class="circle">-</button></p>
+</div>
+
+</div>

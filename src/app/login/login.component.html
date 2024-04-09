@@ -1,0 +1,28 @@
+<mat-card>
+    <mat-card-title>Login</mat-card-title>
+    <mat-card-content>
+                    <p *ngIf="error" class="error">
+                      {{ errorMsg }}
+                    </p>
+            <form [formGroup]="loginForm" (ngSubmit)="submit()">
+                    <p>
+                      <mat-form-field>
+                        <input type="text" matInput placeholder="Username" formControlName="name">
+                      </mat-form-field>
+                    </p>
+              
+                    <p>
+                      <mat-form-field>
+                        <input type="password" matInput placeholder="Password" formControlName="password">
+                      </mat-form-field>
+                    </p>
+
+                    <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
+              
+                    <div class="button">
+                      <button type="submit" mat-button>Login</button>
+                    </div>
+            </form>
+    </mat-card-content>                  
+</mat-card>
+
